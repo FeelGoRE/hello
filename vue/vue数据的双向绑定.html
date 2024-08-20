@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>数据双向绑定</title>
+    <script src="https://cdn.staticfile.net/vue/2.7.0/vue.min.js"></script>
+
+</head>
+<body>
+    <div id="foot">
+        <p>
+            {{name}}
+        </p>
+        单项数据绑定<input type="text" :value="name1"><br>      <!-- 数据的单向绑定 数据流向页面  v-bind指令简写为' :value  '--> 
+        多项数据绑定<input type="text" v-model="name1">  <br>        <!-- 数据的双向绑定 从页面改变数据 v-model:value 简写为' v-model: '-->
+        v-model指令用于表单拥有标签属性值value的时使用
+    </div>
+    <script>
+        new Vue({
+            el:'#foot',
+            data:{
+                name:"hello,world",
+                name1:"sdsdg"
+            }
+        });
+    </script>
+</body>
+</html>

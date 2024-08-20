@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>vue-demo01</title>
+    <script src="https://cdn.staticfile.net/vue/2.7.0/vue.min.js"></script>
+</head>
+<body>
+    <!-- 1.先准备一个容器 -->
+    <div id="foot">
+        {{name}}    <!-- 插值语法，将name键的值插入到标签内-->
+    </div>
+    <script>
+        // 2.创建一个vue实例
+        new Vue({       //  Vue 首字母大写
+            el:'#foot',  //3.绑定容器，挂载容器
+            data:{              // 4.准备数据
+                name:"hello,world"      // 
+            }
+        });
+    </script>
+</body>
+</html>
